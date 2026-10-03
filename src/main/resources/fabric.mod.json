@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "justenoughendupdate",
+	"version": "${version}",
+	"name": "just enough end update",
+	"description": "This is a mod that updates the end dimension",
+	"authors": [
+		"Menotok"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT-License",
+	"icon": "assets/justenoughendupdate/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.menotok.justenoughendupdate.JustEnoughEndUpdate"
+		],
+		"fabric-datagen": [
+			"net.menotok.justenoughendupdate.JustEnoughEndUpdateDataGenerator"
+		]
+	},
+	"mixins": [
+		"justenoughendupdate.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
