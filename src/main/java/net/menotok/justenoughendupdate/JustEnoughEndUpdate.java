@@ -2,6 +2,9 @@ package net.menotok.justenoughendupdate;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.menotok.justenoughendupdate.block.ModBlocks;
+import net.menotok.justenoughendupdate.creativemodetab.ModCreativeModeTabs;
+import net.menotok.justenoughendupdate.item.ModItems;
 import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
@@ -13,6 +16,10 @@ public class JustEnoughEndUpdate implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModCreativeModeTabs.registerModCreativeModeTabs();
+
+		ModItems.registerModItems();
+		ModBlocks.registerModBlock();
 	}
 
 	public static Identifier id(String path) {
