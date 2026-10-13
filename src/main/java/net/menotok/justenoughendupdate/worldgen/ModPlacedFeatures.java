@@ -13,9 +13,12 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
+    public static final ResourceKey<PlacedFeature> END_SURFACE_PLACED = registerKey("end_surface_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
+        var features = context.lookup(Registries.FEATURE);
 
+        register(context, END_SURFACE_PLACED, features.getOrThrow(ModFeatures.END_SURFACE), List.of(BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

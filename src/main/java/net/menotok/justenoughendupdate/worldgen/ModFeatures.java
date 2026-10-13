@@ -1,6 +1,7 @@
 package net.menotok.justenoughendupdate.worldgen;
 
 import net.menotok.justenoughendupdate.JustEnoughEndUpdate;
+import net.menotok.justenoughendupdate.worldgen.feature.EndSurfaceFeature;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
@@ -8,9 +9,10 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.feature.*;
 
 public class ModFeatures {
+    public static final ResourceKey<Feature> END_SURFACE = registerKey("end_surface");
 
     public static void bootstrap(BootstrapContext<Feature> context) {
-
+        context.register(END_SURFACE, new EndSurfaceFeature());
     }
 
     public static ResourceKey<Feature> registerKey(String name) {

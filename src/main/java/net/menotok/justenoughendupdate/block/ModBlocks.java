@@ -32,6 +32,8 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4.5f, 9.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+
+
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, name))));
         registerBlockItem(name, toRegister);

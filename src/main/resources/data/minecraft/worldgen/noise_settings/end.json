@@ -58,9 +58,9 @@
   "default_fluid": "minecraft:air",
   "disable_mob_generation": true,
   "legacy_random_source": true,
-  "material_rule": "justenoughendupdate:end",
+  "material_rule": "minecraft:end",
   "noise": {
-    "height": 128,
+    "height": 256,
     "min_y": 0
   },
   "noise_router": {
@@ -80,32 +80,8 @@
             "type": "minecraft:mul",
             "left": {
               "type": "minecraft:blend_density",
-              "input": {
-                "type": "minecraft:lerp",
-                "alpha": {
-                  "type": "minecraft:gradient",
-                  "axis": "y",
-                  "from_coordinate": 4,
-                  "from_value": 0.0,
-                  "to_coordinate": 32,
-                  "to_value": 1.0
-                },
-                "first": -0.234375,
-                "second": {
-                  "type": "minecraft:lerp",
-                  "alpha": {
-                    "type": "minecraft:gradient",
-                    "axis": "y",
-                    "from_coordinate": 56,
-                    "from_value": 1.0,
-                    "to_coordinate": 312,
-                    "to_value": 0.0
-                  },
-                  "first": -23.4375,
-                  "second": "minecraft:end/sloped_cheese"
-                }
-              }
-            },
+              "input": "justenoughendupdate:end/terrain"
+          },
             "right": 0.64
           }
         }

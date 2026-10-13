@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "justenoughendupdate:block/end_sand"
-    }
+    "": [
+      {
+        "model": "justenoughendupdate:block/end_sand"
+      },
+      {
+        "model": "justenoughendupdate:block/end_sand",
+        "y": 90
+      },
+      {
+        "model": "justenoughendupdate:block/end_sand",
+        "y": 180
+      },
+      {
+        "model": "justenoughendupdate:block/end_sand",
+        "y": 270
+      }
+    ]
   }
 }
