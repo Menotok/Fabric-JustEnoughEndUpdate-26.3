@@ -12,19 +12,24 @@ import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class ModBiomes {
-    public static final ResourceKey<Biome> END_LAYER_1 = registerKey("end_layer_1");
-    public static final ResourceKey<Biome> END_LAYER_2 = registerKey("end_layer_2");
+    public static final ResourceKey<Biome> END_LOWLANDS = registerKey("end_lowlands");
+    public static final ResourceKey<Biome> END_SHATTERS = registerKey("end_shatters");
+    public static final ResourceKey<Biome> END_VOID = registerKey("end_void");
 
     public static void bootstrap(BootstrapContext<Biome> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var carvers = context.lookup(Registries.CARVER);
 
-        context.register(END_LAYER_1, EndBiomes.baseEndBiome(
+        context.register(END_LOWLANDS, EndBiomes.baseEndBiome(
                 new BiomeGenerationSettings.Builder(placedFeatures, carvers)
                         .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, EndPlacements.CHORUS_PLANT)
         ));
 
-        context.register(END_LAYER_2, EndBiomes.baseEndBiome(
+        context.register(END_SHATTERS, EndBiomes.baseEndBiome(
+                new BiomeGenerationSettings.Builder(placedFeatures, carvers)
+        ));
+
+        context.register(END_VOID, EndBiomes.baseEndBiome(
                 new BiomeGenerationSettings.Builder(placedFeatures, carvers)
         ));
     }

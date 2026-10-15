@@ -21,7 +21,8 @@ import java.util.stream.Stream;
         Holder<Biome> biome = EndLayerBiomes.biomeFor(
                 QuartPos.toBlock(quartX),
                 QuartPos.toBlock(quartY),
-                QuartPos.toBlock(quartZ)
+                QuartPos.toBlock(quartZ),
+                sampler.depth().sampleValue(QuartPos.toBlock(quartX), QuartPos.toBlock(quartY), QuartPos.toBlock(quartZ))
         );
         if (biome != null) {
             cir.setReturnValue(biome);
@@ -36,8 +37,9 @@ import java.util.stream.Stream;
         cir.setReturnValue(Stream.concat(
                 cir.getReturnValue(),
                 Stream.of(
-                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_LAYER_1),
-                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_LAYER_2)
+                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_LOWLANDS),
+                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_SHATTERS),
+                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_VOID)
                 )
         ));
     }
