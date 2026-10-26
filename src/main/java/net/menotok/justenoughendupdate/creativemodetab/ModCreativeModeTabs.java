@@ -19,6 +19,9 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.justenoughendupdate.endupdate_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TEST);
+                        output.accept(ModBlocks.CHORAL);
+                        output.accept(ModBlocks.CHORAL_FAN_ITEM);
+                        output.accept(ModBlocks.TENOR_SPROUTS);
 
                     }).build());
 
@@ -29,9 +32,9 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.END_SAND);
                         output.accept(ModBlocks.END_SLATE);
+                        output.accept(ModBlocks.CHORAL_BLOCK);
 
                     }).build());
-
 
     public static void registerModCreativeModeTabs() {
         JustEnoughEndUpdate.LOGGER.info("Registering Creative Mode Tabs for " + JustEnoughEndUpdate.MOD_ID);

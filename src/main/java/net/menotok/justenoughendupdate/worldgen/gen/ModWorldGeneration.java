@@ -25,6 +25,17 @@ public class ModWorldGeneration {
                 ModPlacedFeatures.SMALL_ISLAND_PLACED
         );
 
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(Biomes.END_HIGHLANDS, Biomes.END_MIDLANDS, Biomes.END_BARRENS),
+                GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.CHORAL_PLACED
+        );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(Biomes.END_HIGHLANDS, Biomes.END_MIDLANDS, Biomes.END_BARRENS),
+                GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.END_PLANTS_PLACED
+        );
+
         BiomeModifications.create(Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, "remove_vanilla_small_islands"))
                 .add(ModificationPhase.REMOVALS,
                         BiomeSelectors.foundInTheEnd(),
