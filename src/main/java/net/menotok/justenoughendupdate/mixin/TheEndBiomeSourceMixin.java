@@ -18,12 +18,17 @@ import java.util.stream.Stream;
 
     @Inject(method = "getNoiseBiome", at = @At("HEAD"), cancellable = true)
     private void justenoughendupdate$layerBiomes(int quartX, int quartY, int quartZ, Climate.Sampler sampler, CallbackInfoReturnable<Holder<Biome>> cir) {
-        Holder<Biome> biome = EndLayerBiomes.biomeFor(
-                QuartPos.toBlock(quartX),
-                QuartPos.toBlock(quartY),
-                QuartPos.toBlock(quartZ),
-                sampler.depth().sampleValue(QuartPos.toBlock(quartX), QuartPos.toBlock(quartY), QuartPos.toBlock(quartZ))
+        int bx = QuartPos.toBlock(quartX);
+        int by = QuartPos.toBlock(quartY);
+        int bz = QuartPos.toBlock(quartZ);
+
+        double density = Math.max(
+                sampler.depth().sampleValue(bx, by, bz),
+                sampler.depth().sampleValue(bx, by - 6, bz)
         );
+        double lowlandsMap = sampler.continentalness().sampleValue(bx, by, bz);
+
+        Holder<Biome> biome = EndLayerBiomes.biomeFor(bx, by, bz, density, lowlandsMap);
         if (biome != null) {
             cir.setReturnValue(biome);
         }

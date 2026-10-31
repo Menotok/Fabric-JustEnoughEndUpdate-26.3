@@ -2,6 +2,7 @@ package net.menotok.justenoughendupdate;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.menotok.justenoughendupdate.datagen.ModBiomeTagProvider;
 import net.menotok.justenoughendupdate.datagen.ModBlockTagProvider;
 import net.menotok.justenoughendupdate.datagen.ModModelProvider;
 import net.menotok.justenoughendupdate.datagen.ModRegistryDataProvider;
@@ -20,6 +21,7 @@ public class JustEnoughEndUpdateDataGenerator implements DataGeneratorEntrypoint
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModRegistryDataProvider::new);
+		pack.addProvider(ModBiomeTagProvider::new);
 	}
 
 	@Override

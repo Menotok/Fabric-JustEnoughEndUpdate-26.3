@@ -1,7 +1,8 @@
-package net.menotok.justenoughendupdate.worldgen;
+package net.menotok.justenoughendupdate.worldgen.feature;
 
 import net.menotok.justenoughendupdate.block.ModBlocks;
 import net.menotok.justenoughendupdate.tags.ModBlockTags;
+import net.menotok.justenoughendupdate.worldgen.ModFeatures;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;

@@ -23,20 +23,14 @@ public class ModBiomes {
         context.register(END_LOWLANDS, EndBiomes.baseEndBiome(
                 new BiomeGenerationSettings.Builder(placedFeatures, carvers)
                         .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, EndPlacements.CHORUS_PLANT)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.CHORAL_PLACED)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.END_PLANTS_PLACED)
         ));
 
         context.register(END_SHATTERS, EndBiomes.baseEndBiome(
                 new BiomeGenerationSettings.Builder(placedFeatures, carvers)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.CHORAL_PLACED)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.END_PLANTS_PLACED)
         ));
 
         context.register(END_VOID, EndBiomes.baseEndBiome(
                 new BiomeGenerationSettings.Builder(placedFeatures, carvers)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.CHORAL_PLACED)
-                        .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.END_PLANTS_PLACED)
         ));
     }
 

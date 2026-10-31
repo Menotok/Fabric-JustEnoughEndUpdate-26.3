@@ -2,8 +2,10 @@ package net.menotok.justenoughendupdate.worldgen;
 
 import net.menotok.justenoughendupdate.JustEnoughEndUpdate;
 import net.menotok.justenoughendupdate.block.ModBlocks;
+import net.menotok.justenoughendupdate.worldgen.feature.ChoralFeatures;
 import net.menotok.justenoughendupdate.worldgen.feature.EndSurfaceFeature;
 import net.menotok.justenoughendupdate.worldgen.feature.SmallIslandFeature;
+import net.menotok.justenoughendupdate.worldgen.feature.TenorVinesFeature;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
@@ -21,6 +23,7 @@ public class ModFeatures {
         context.register(SMALL_ISLAND, new SmallIslandFeature());
         context.register(END_PLANTS, new SimpleBlockFeature(BlockStateProvider.of(ModBlocks.TENOR_SPROUTS)));
         ChoralFeatures.bootstrap(context);
+        TenorVinesFeature.bootstrap(context);
     }
 
     public static ResourceKey<Feature> registerKey(String name) {

@@ -1,6 +1,9 @@
 package net.menotok.justenoughendupdate.worldgen;
 
 import net.menotok.justenoughendupdate.JustEnoughEndUpdate;
+import net.menotok.justenoughendupdate.tags.ModBlockTags;
+import net.menotok.justenoughendupdate.worldgen.feature.ChoralFeatures;
+import net.menotok.justenoughendupdate.worldgen.feature.TenorVinesFeature;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -10,6 +13,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.VinesFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
@@ -19,6 +23,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SMALL_ISLAND_PLACED = registerKey("small_island_placed");
     public static final ResourceKey<PlacedFeature> CHORAL_PLACED = registerKey("choral_placed");
     public static final ResourceKey<PlacedFeature> END_PLANTS_PLACED = registerKey("end_plants_placed");
+    public static final ResourceKey<PlacedFeature> TENOR_VINES_PLACED = registerKey("tenor_vines_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var features = context.lookup(Registries.FEATURE);
@@ -49,6 +54,17 @@ public class ModPlacedFeatures {
                 CountPlacement.of(32),
                 OffsetPlacement.ofTriangle(5, 2),
                 BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)));
+
+        register(context, TENOR_VINES_PLACED, features.getOrThrow(TenorVinesFeature.TENOR_VINES), List.of(
+                NoiseBasedCountPlacement.of(12, 100, 0),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(0),VerticalAnchor.absolute(236)),
+                EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.solid(),BlockPredicate.ONLY_IN_AIR_PREDICATE,24),
+                OffsetPlacement.of(0, -1, 0),
+                BiomeFilter.biome(),
+                CountPlacement.of(75),
+                OffsetPlacement.ofTriangle(5,2),
+                BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, BlockPredicate.matchesTag(Direction.UP, ModBlockTags.TENOR_VINES_GENERATE_ON)))));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

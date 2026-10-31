@@ -1,6 +1,7 @@
 package net.menotok.justenoughendupdate.block;
 
 import net.menotok.justenoughendupdate.JustEnoughEndUpdate;
+import net.menotok.justenoughendupdate.block.custom.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
@@ -47,6 +48,13 @@ public class ModBlocks {
     public static final Block TENOR_SPROUTS = registerBlock("tenor_sprouts",
             properties -> new EndPlants(properties.replaceable().noCollision().instabreak()
                     .sound(SoundType.NETHER_SPROUTS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.POPPED)));
+
+    public static final Block TENOR_VINES_BLOCK = registerBlock("tenor_vines",
+            properties -> new TenorVinesBlock(properties.randomTicks().noCollision().instabreak()
+                    .sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.POPPED)));
+    public static final Block TENOR_VINES_PLANT_BLOCK = registerBlockWithoutItem("tenor_vines_plant",
+            properties -> new TenorVinesPlantBlock(properties.randomTicks().noCollision().instabreak()
+                    .sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.POPPED)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, name))));

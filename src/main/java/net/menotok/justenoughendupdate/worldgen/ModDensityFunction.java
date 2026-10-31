@@ -15,6 +15,7 @@ import net.minecraft.world.level.levelgen.synth.NormalNoise;
 
 public class ModDensityFunction {
     public static final ResourceKey<DensityFunction> END_TERRAIN = registerKey("end/terrain");
+    public static final ResourceKey<DensityFunction> LOWLANDS_MAP = registerKey("end/lowlands_map");
 
     public static void bootstrap(BootstrapContext<DensityFunction> context) {
         var functions = context.lookup(Registries.DENSITY_FUNCTION);
@@ -26,8 +27,9 @@ public class ModDensityFunction {
         DensityFunction centerDistance = DensityFunctions.sliceY(DensityFunctions.distanceToPoint(Vec3i.ZERO, DistanceMetric.EUCLIDEAN), 0);
         DensityFunction centerMask = DensityFunctions.add(DensityFunctions.mul(centerDistance, DensityFunctions.constant(1.0F / 100.0F)), DensityFunctions.constant(-1000.0F / 100.0F)).clamp(0.0F, 1.0F);
 
+        var lowlandsMap = context.register(LOWLANDS_MAP, islandMap(noises,1000F, 0.45, 0.35F));
         DensityFunction layer0 = islandLayer(vanillaIslands, detail, 56.0F, 52F);
-        DensityFunction layer1 = islandLayer(islandMap(noises, 1000.0F, 0.45, 0.35F), detail, 130.0F, 40F);
+        DensityFunction layer1 = islandLayer(new DensityFunctions.HolderHolder(lowlandsMap), detail, 130.0F, 40.0F);
         DensityFunction layer2 = islandLayer(islandMap(noises, 2000.0F, 0.7, 0.45F), detail, 190.0F, 26F);
 
         DensityFunction upperLayers = DensityFunctions.max(layer1, layer2);

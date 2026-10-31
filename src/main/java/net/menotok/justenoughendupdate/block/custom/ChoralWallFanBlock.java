@@ -1,4 +1,4 @@
-package net.menotok.justenoughendupdate.block;
+package net.menotok.justenoughendupdate.block.custom;
 
 import net.minecraft.world.level.block.BaseCoralWallFanBlock;
 

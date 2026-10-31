@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class ModCreativeModeTabs {
 
-    public static final CreativeModeTab END_UPDATE_ITEMS_Tab = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+    public static final CreativeModeTab END_UPDATE_ITEMS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, "end_update_items"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TEST))
                     .title(Component.translatable("creativemodetab.justenoughendupdate.endupdate_items"))
@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CHORAL);
                         output.accept(ModBlocks.CHORAL_FAN_ITEM);
                         output.accept(ModBlocks.TENOR_SPROUTS);
+                        output.accept(ModBlocks.TENOR_VINES_BLOCK);
 
                     }).build());
 
