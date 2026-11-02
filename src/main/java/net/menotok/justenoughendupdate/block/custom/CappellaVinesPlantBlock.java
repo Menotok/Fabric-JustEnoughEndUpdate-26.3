@@ -8,15 +8,15 @@ import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class TenorVinesPlantBlock extends GrowingPlantBodyBlock {
+public class CappellaVinesPlantBlock extends GrowingPlantBodyBlock {
     private static final VoxelShape SHAPE = Block.column((double)14.0F, (double)0.0F, (double)16.0F);
 
-    public TenorVinesPlantBlock(final BlockBehaviour.Properties properties) {
+    public CappellaVinesPlantBlock(final BlockBehaviour.Properties properties) {
         super(properties, Direction.DOWN, SHAPE, false);
     }
 
     protected GrowingPlantHeadBlock getHeadBlock() {
-        return (GrowingPlantHeadBlock) ModBlocks.TENOR_VINES_BLOCK;
+        return (GrowingPlantHeadBlock) ModBlocks.CAPPELLA_VINES_BLOCK;
     }
 }
 

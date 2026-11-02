@@ -65,7 +65,7 @@
   },
   "noise_router": {
     "chunk_surface_level": 0.0,
-    "continents": "justenoughendupdate:end/lowlands_map",
+    "continents": "justenoughendupdate:end/highlands_2_map",
     "depth": "justenoughendupdate:end/terrain",
     "erosion": "minecraft:end/islands",
     "final_density": {
@@ -90,7 +90,7 @@
         "type": "minecraft:beardifier"
       }
     },
-    "ridges": 0.0,
+    "ridges": "justenoughendupdate:end/highlands_3_map",
     "temperature": 0.0,
     "vegetation": 0.0
   },

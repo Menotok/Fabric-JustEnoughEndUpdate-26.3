@@ -2,6 +2,7 @@ package net.menotok.justenoughendupdate.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.menotok.justenoughendupdate.tags.ModBiomeTags;
 import net.menotok.justenoughendupdate.worldgen.ModBiomes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -18,6 +19,8 @@ public class ModBiomeTagProvider extends FabricTagsProvider<Biome> {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        builder(BiomeTags.HAS_NETHER_FOSSIL).add(ModBiomes.END_LOWLANDS, ModBiomes.END_SHATTERS, Biomes.END_BARRENS, Biomes.END_MIDLANDS);
+        builder(ModBiomeTags.HAS_END_FOSSIL).add(ModBiomes.END_HIGHLANDS_2, ModBiomes.END_HIGHLANDS_3, Biomes.END_BARRENS, Biomes.END_MIDLANDS);
+
+        builder(BiomeTags.HAS_END_CITY).add(Biomes.END_HIGHLANDS).setReplace(true);
     }
 }

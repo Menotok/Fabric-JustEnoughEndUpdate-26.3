@@ -10,10 +10,10 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class TenorVinesBlock extends GrowingPlantHeadBlock {
+public class CappellaVinesBlock extends GrowingPlantHeadBlock {
     private static final VoxelShape SHAPE = Block.column(8.0, 9.0, 16.0);
 
-    public TenorVinesBlock(final BlockBehaviour.Properties properties) {
+    public CappellaVinesBlock(final BlockBehaviour.Properties properties) {
         super(properties, Direction.DOWN, SHAPE, false, 0.1);
     }
 
@@ -24,7 +24,7 @@ public class TenorVinesBlock extends GrowingPlantHeadBlock {
 
     @Override
     protected Block getBodyBlock() {
-        return ModBlocks.TENOR_VINES_PLANT_BLOCK;
+        return ModBlocks.CAPPELLA_VINES_PLANT_BLOCK;
     }
 
     @Override

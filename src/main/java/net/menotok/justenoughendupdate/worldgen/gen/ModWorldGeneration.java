@@ -17,11 +17,11 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import java.util.List;
 
 public class ModWorldGeneration {
-    private static final List<ResourceKey<Biome>> LUSH = List.of(Biomes.END_HIGHLANDS, ModBiomes.END_LOWLANDS);
+    private static final List<ResourceKey<Biome>> LUSH = List.of(Biomes.END_HIGHLANDS, ModBiomes.END_HIGHLANDS_2);
     private static final List<ResourceKey<Biome>> VOID = List.of(ModBiomes.END_VOID);
     private static final List<ResourceKey<Biome>> ALL_END = List.of(
             Biomes.END_HIGHLANDS, Biomes.END_MIDLANDS, Biomes.END_BARRENS,
-            ModBiomes.END_LOWLANDS, ModBiomes.END_SHATTERS, ModBiomes.END_VOID);
+            ModBiomes.END_HIGHLANDS_2, ModBiomes.END_HIGHLANDS_3, ModBiomes.END_VOID);
 
     public static void generateModWorldGen() {
         BiomeModifications.addFeature(

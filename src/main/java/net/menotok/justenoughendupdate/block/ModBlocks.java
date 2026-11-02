@@ -49,11 +49,11 @@ public class ModBlocks {
             properties -> new EndPlants(properties.replaceable().noCollision().instabreak()
                     .sound(SoundType.NETHER_SPROUTS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.POPPED)));
 
-    public static final Block TENOR_VINES_BLOCK = registerBlock("tenor_vines",
-            properties -> new TenorVinesBlock(properties.randomTicks().noCollision().instabreak()
+    public static final Block CAPPELLA_VINES_BLOCK = registerBlock("cappella_vines",
+            properties -> new CappellaVinesBlock(properties.randomTicks().noCollision().instabreak()
                     .sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.POPPED)));
-    public static final Block TENOR_VINES_PLANT_BLOCK = registerBlockWithoutItem("tenor_vines_plant",
-            properties -> new TenorVinesPlantBlock(properties.randomTicks().noCollision().instabreak()
+    public static final Block CAPPELLA_VINES_PLANT_BLOCK = registerBlockWithoutItem("cappella_vines_plant",
+            properties -> new CappellaVinesPlantBlock(properties.randomTicks().noCollision().instabreak()
                     .sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.POPPED)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

@@ -6,7 +6,7 @@ import net.menotok.justenoughendupdate.block.ModBlocks;
 import net.menotok.justenoughendupdate.creativemodetab.ModCreativeModeTabs;
 import net.menotok.justenoughendupdate.item.ModItems;
 import net.menotok.justenoughendupdate.worldgen.EndLayerBiomes;
-import net.menotok.justenoughendupdate.worldgen.ModBiomes;
+import net.menotok.justenoughendupdate.worldgen.ModDensityFunctionTypes;
 import net.menotok.justenoughendupdate.worldgen.ModFeatureTypes;
 import net.menotok.justenoughendupdate.worldgen.gen.ModWorldGeneration;
 import net.minecraft.resources.Identifier;
@@ -28,6 +28,7 @@ public class JustEnoughEndUpdate implements ModInitializer {
 
 		ModWorldGeneration.generateModWorldGen();
 		ModFeatureTypes.register();
+		ModDensityFunctionTypes.register();
 	}
 
 	public static Identifier id(String path) {

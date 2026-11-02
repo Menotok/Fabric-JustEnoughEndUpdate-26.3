@@ -7,12 +7,12 @@
   "block.justenoughendupdate.choral_fan": "Choral Fan",
 
   "block.justenoughendupdate.tenor_sprouts": "Tenor Sprouts",
-  "block.justenoughendupdate.tenor_vines": "Tenor Vines",
+  "block.justenoughendupdate.cappella_vines": "Cappella Vines",
 
   "creativemodetab.justenoughendupdate.endupdate_items": "Just Enough End Update Items",
   "creativemodetab.justenoughendupdate.endupdate_blocks": "Just Enough End Update Blocks",
 
-  "biome.justenoughendupdate.end_lowlands": "End Lowlands",
-  "biome.justenoughendupdate.end_shatters": "End Shatters",
+  "biome.justenoughendupdate.end_highlands_2": "End Highlands",
+  "biome.justenoughendupdate.end_highlands_3": "End Highlands",
   "biome.justenoughendupdate.end_void": "End Void"
 }

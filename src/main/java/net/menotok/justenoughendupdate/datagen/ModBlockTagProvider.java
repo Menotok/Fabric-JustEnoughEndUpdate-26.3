@@ -37,8 +37,8 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BuiltInRegistries.BLOCK.getResourceKey(Blocks.END_STONE).orElseThrow())
                 .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SLATE).orElseThrow());
         builder(BlockTags.CLIMBABLE)
-                .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.TENOR_VINES_BLOCK).orElseThrow())
-                .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.TENOR_VINES_PLANT_BLOCK).orElseThrow());
+                .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.CAPPELLA_VINES_BLOCK).orElseThrow())
+                .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.CAPPELLA_VINES_PLANT_BLOCK).orElseThrow());
 
         builder(BlockTags.BLOCKS_MOTION_IN_HEIGHTMAP)
                 .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SAND).orElseThrow())

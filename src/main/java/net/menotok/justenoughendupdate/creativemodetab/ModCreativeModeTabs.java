@@ -22,7 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CHORAL);
                         output.accept(ModBlocks.CHORAL_FAN_ITEM);
                         output.accept(ModBlocks.TENOR_SPROUTS);
-                        output.accept(ModBlocks.TENOR_VINES_BLOCK);
+                        output.accept(ModBlocks.CAPPELLA_VINES_BLOCK);
 
                     }).build());
 

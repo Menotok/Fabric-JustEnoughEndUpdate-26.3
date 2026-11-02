@@ -6,10 +6,7 @@ import net.menotok.justenoughendupdate.datagen.ModBiomeTagProvider;
 import net.menotok.justenoughendupdate.datagen.ModBlockTagProvider;
 import net.menotok.justenoughendupdate.datagen.ModModelProvider;
 import net.menotok.justenoughendupdate.datagen.ModRegistryDataProvider;
-import net.menotok.justenoughendupdate.worldgen.ModBiomes;
-import net.menotok.justenoughendupdate.worldgen.ModDensityFunction;
-import net.menotok.justenoughendupdate.worldgen.ModFeatures;
-import net.menotok.justenoughendupdate.worldgen.ModPlacedFeatures;
+import net.menotok.justenoughendupdate.worldgen.*;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 
@@ -28,6 +25,8 @@ public class JustEnoughEndUpdateDataGenerator implements DataGeneratorEntrypoint
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 		registryBuilder.add(Registries.FEATURE, ModFeatures::bootstrap);
 		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.add(Registries.STRUCTURE, ModStructures::bootstrap);
+		registryBuilder.add(Registries.STRUCTURE_SET, ModStructureSets::bootstrap);
 		registryBuilder.add(Registries.DENSITY_FUNCTION, ModDensityFunction::bootstrap);
 		registryBuilder.add(Registries.BIOME, ModBiomes::bootstrap);
 	}

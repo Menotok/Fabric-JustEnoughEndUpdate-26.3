@@ -26,9 +26,10 @@ import java.util.stream.Stream;
                 sampler.depth().sampleValue(bx, by, bz),
                 sampler.depth().sampleValue(bx, by - 6, bz)
         );
-        double lowlandsMap = sampler.continentalness().sampleValue(bx, by, bz);
+        double highlands2Map = sampler.continentalness().sampleValue(bx, by, bz);
+        double highlands3Map = sampler.weirdness().sampleValue(bx, by, bz);
 
-        Holder<Biome> biome = EndLayerBiomes.biomeFor(bx, by, bz, density, lowlandsMap);
+        Holder<Biome> biome = EndLayerBiomes.biomeFor(bx, by, bz, density, highlands2Map, highlands3Map);
         if (biome != null) {
             cir.setReturnValue(biome);
         }
@@ -42,8 +43,8 @@ import java.util.stream.Stream;
         cir.setReturnValue(Stream.concat(
                 cir.getReturnValue(),
                 Stream.of(
-                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_LOWLANDS),
-                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_SHATTERS),
+                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_HIGHLANDS_2),
+                        EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_HIGHLANDS_3),
                         EndLayerBiomes.biomeRegistry.getOrThrow(ModBiomes.END_VOID)
                 )
         ));

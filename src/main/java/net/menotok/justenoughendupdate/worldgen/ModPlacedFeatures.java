@@ -3,7 +3,7 @@ package net.menotok.justenoughendupdate.worldgen;
 import net.menotok.justenoughendupdate.JustEnoughEndUpdate;
 import net.menotok.justenoughendupdate.tags.ModBlockTags;
 import net.menotok.justenoughendupdate.worldgen.feature.ChoralFeatures;
-import net.menotok.justenoughendupdate.worldgen.feature.TenorVinesFeature;
+import net.menotok.justenoughendupdate.worldgen.feature.CappellaVinesFeature;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -13,7 +13,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.VinesFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
@@ -55,7 +54,7 @@ public class ModPlacedFeatures {
                 OffsetPlacement.ofTriangle(5, 2),
                 BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)));
 
-        register(context, TENOR_VINES_PLACED, features.getOrThrow(TenorVinesFeature.TENOR_VINES), List.of(
+        register(context, TENOR_VINES_PLACED, features.getOrThrow(CappellaVinesFeature.CAPPELLA_VINES), List.of(
                 NoiseBasedCountPlacement.of(12, 100, 0),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(0),VerticalAnchor.absolute(236)),

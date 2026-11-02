@@ -20,10 +20,10 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.RandomizedIntSt
 
 import java.util.List;
 
-public class TenorVinesFeature {
-    public static final ResourceKey<Feature> TENOR_VINES = ModFeatures.registerKey("tenor_vines");
+public class CappellaVinesFeature {
+    public static final ResourceKey<Feature> CAPPELLA_VINES = ModFeatures.registerKey("cappella_vines");
 
-    private static Feature createTenorVines(final int minHeight, final int maxHeight, final Direction direction, final Block mainBlock, final Block tipBlock) {
+    private static Feature createCappellaVines(final int minHeight, final int maxHeight, final Direction direction, final Block mainBlock, final Block tipBlock) {
         IntProvider mainHeight = new WeightedListInt(
                 WeightedList.<IntProvider>builder()
                         .add(UniformInt.of(minHeight - 1, maxHeight - 1), 10)
@@ -45,6 +45,6 @@ public class TenorVinesFeature {
     }
 
     public static void bootstrap(BootstrapContext<Feature> context) {
-        context.register(TENOR_VINES, createTenorVines(2,9, Direction.DOWN, ModBlocks.TENOR_VINES_PLANT_BLOCK, ModBlocks.TENOR_VINES_BLOCK));
+        context.register(CAPPELLA_VINES, createCappellaVines(2,9, Direction.DOWN, ModBlocks.CAPPELLA_VINES_PLANT_BLOCK, ModBlocks.CAPPELLA_VINES_BLOCK));
     }
 }

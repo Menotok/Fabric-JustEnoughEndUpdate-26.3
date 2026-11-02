@@ -17,6 +17,8 @@ public class ModRegistryDataProvider extends FabricDynamicRegistryProvider {
 
         entries.addAll(registries.lookupOrThrow(Registries.FEATURE));
         entries.addAll(registries.lookupOrThrow(Registries.PLACED_FEATURE));
+        entries.addAll(registries.lookupOrThrow(Registries.STRUCTURE));
+        entries.addAll(registries.lookupOrThrow(Registries.STRUCTURE_SET));
         entries.addAll(registries.lookupOrThrow(Registries.DENSITY_FUNCTION));
         entries.addAll(registries.lookupOrThrow(Registries.BIOME));
     }

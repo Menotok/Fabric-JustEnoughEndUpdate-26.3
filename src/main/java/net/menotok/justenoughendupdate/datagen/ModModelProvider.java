@@ -24,8 +24,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockModelGenerators.createCrossBlockWithDefaultItem(ModBlocks.TENOR_SPROUTS, BlockModelGenerators.PlantType.NOT_TINTED);
 
-        blockModelGenerators.createGrowingPlant(ModBlocks.TENOR_VINES_BLOCK, ModBlocks.TENOR_VINES_PLANT_BLOCK,BlockModelGenerators.PlantType.NOT_TINTED);
-        blockModelGenerators.registerSimpleFlatItemModel(ModBlocks.TENOR_VINES_BLOCK, "_plant");
+        blockModelGenerators.createGrowingPlant(ModBlocks.CAPPELLA_VINES_BLOCK, ModBlocks.CAPPELLA_VINES_PLANT_BLOCK,BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.registerSimpleFlatItemModel(ModBlocks.CAPPELLA_VINES_BLOCK, "_plant");
     }
 
     @Override

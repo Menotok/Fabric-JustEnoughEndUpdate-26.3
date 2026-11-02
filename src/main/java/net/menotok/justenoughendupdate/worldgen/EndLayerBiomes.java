@@ -9,13 +9,13 @@ import net.minecraft.world.level.biome.Biomes;
 
 public class EndLayerBiomes {
     public static Registry<Biome> biomeRegistry;
-    public static final int END_LOWLANDS_MIN_Y = 85;
-    public static final int END_SHATTERS_MIN_Y = 160;
+    public static final int END_HIGHLANDS_2_MIN_Y = 85;
+    public static final int END_HIGHLANDS_3_MIN_Y = 160;
     public static final double VOID_THRESHOLD = -0.1;
-    public static final double LOWLANDS_BARRENS_THRESHOLD = 0.1;
+    public static final double HIGHLANDS_THRESHOLD = 0.25;
+    public static final double MIDLANDS_THRESHOLD = -0.0625;
 
-    public static Holder<Biome> biomeFor(int blockX, int blockY, int blockZ, double density, double lowlandsMap) {
-        if (biomeRegistry == null) {
+    public static Holder<Biome> biomeFor(int blockX, int blockY, int blockZ, double density, double highlands2Map, double highlands3Map) {        if (biomeRegistry == null) {
             return null;
         }
 
@@ -30,15 +30,24 @@ public class EndLayerBiomes {
             return biomeRegistry.getOrThrow(ModBiomes.END_VOID);
         }
 
-        if (blockY >= END_SHATTERS_MIN_Y) {
-            return biomeRegistry.getOrThrow(ModBiomes.END_SHATTERS);
+        if (blockY >= END_HIGHLANDS_3_MIN_Y) {
+            if (highlands3Map > HIGHLANDS_THRESHOLD) {
+                return biomeRegistry.getOrThrow(ModBiomes.END_HIGHLANDS_3);
+            }
+            if (highlands3Map >= MIDLANDS_THRESHOLD) {
+                return biomeRegistry.getOrThrow(Biomes.END_MIDLANDS);
+            }
+            return biomeRegistry.getOrThrow(Biomes.END_BARRENS);
         }
 
-        if (blockY >= END_LOWLANDS_MIN_Y) {
-            if (lowlandsMap < LOWLANDS_BARRENS_THRESHOLD) {
-                return biomeRegistry.getOrThrow(Biomes.END_BARRENS);
+        if (blockY >= END_HIGHLANDS_2_MIN_Y) {
+            if (highlands2Map > HIGHLANDS_THRESHOLD) {
+                return biomeRegistry.getOrThrow(ModBiomes.END_HIGHLANDS_2);
             }
-            return biomeRegistry.getOrThrow(ModBiomes.END_LOWLANDS);
+            if (highlands2Map >= MIDLANDS_THRESHOLD) {
+                return biomeRegistry.getOrThrow(Biomes.END_MIDLANDS);
+            }
+            return biomeRegistry.getOrThrow(Biomes.END_BARRENS);
         }
         return null;
     }
