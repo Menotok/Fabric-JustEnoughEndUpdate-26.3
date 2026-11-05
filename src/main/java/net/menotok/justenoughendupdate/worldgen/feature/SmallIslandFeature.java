@@ -52,7 +52,7 @@ public record SmallIslandFeature() implements Feature {
                         float shape = 1.0F - (nx * nx + ny * ny + nz * nz);
 
                         BlockPos pos = origin.offset(x, y, z);
-                        double lumps = noise.get(pos.getX() * 0.12, pos.getY() * 0.12, pos.getZ() * 0.12) * 0.45;
+                        double lumps = noise.get(pos.getX() * 0.06, pos.getY() * 0.06, pos.getZ() * 0.06) * 0.25;
 
                         if (shape + lumps > 0) {
                             surfaceDepth++;
