@@ -9,8 +9,14 @@
   "block.justenoughendupdate.tenor_sprouts": "Tenor Sprouts",
   "block.justenoughendupdate.cappella_vines": "Cappella Vines",
 
+  "item.justenoughendupdate.baked_chorus_fruit": "Baked Chorus Fruit",
+
+  "item.justenoughendupdate.shulker_backpack": "Shulker Backpack",
+  "container.justenoughendupdate.backpack": "Shulker Backpack",
+
   "creativemodetab.justenoughendupdate.endupdate_items": "Just Enough End Update Items",
   "creativemodetab.justenoughendupdate.endupdate_blocks": "Just Enough End Update Blocks",
+  "creativemodetab.justenoughendupdate.endupdate_plants": "Just Enough End Update Plants",
 
   "biome.justenoughendupdate.end_highlands_2": "End Highlands",
   "biome.justenoughendupdate.end_highlands_3": "End Highlands",

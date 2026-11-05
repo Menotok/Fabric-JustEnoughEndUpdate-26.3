@@ -17,9 +17,11 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 import org.jspecify.annotations.NullMarked;
 
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 public class ModBlocks {
     public static final Block END_SAND = registerBlock("end_sand",
@@ -35,7 +37,8 @@ public class ModBlocks {
 
     public static final Block CHORAL_BLOCK = registerBlock( "choral_block",
             properties -> new Block(properties.strength(1.5F, 6.0F)
-                    .requiresCorrectToolForDrops().sound(SoundType.CORAL_BLOCK)));
+                    .requiresCorrectToolForDrops().sound(SoundType.CORAL_BLOCK)),
+            p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_BLOCKS));
     public static final Block CHORAL_FAN = registerBlockWithoutItem( "choral_fan",
             properties -> new ChoralFanBlock(properties.instabreak()
                     .requiresCorrectToolForDrops().noCollision().sound(SoundType.CORAL_BLOCK)));
@@ -44,7 +47,8 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().noCollision().sound(SoundType.CORAL_BLOCK)));
     public static final Block CHORAL = registerBlock( "choral",
             properties -> new ChoralPlantBlock(properties.instabreak()
-                    .requiresCorrectToolForDrops().noCollision().sound(SoundType.CORAL_BLOCK)));
+                    .requiresCorrectToolForDrops().noCollision().sound(SoundType.CORAL_BLOCK)),
+            p -> p.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_ITEMS_EXTRA_SMALL));
 
     public static final Block TENOR_SPROUTS = registerBlock("tenor_sprouts",
             properties -> new EndPlants(properties.replaceable().noCollision().instabreak()
@@ -58,8 +62,12 @@ public class ModBlocks {
                     .sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.POPPED)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
+        return registerBlock(name, function, p -> p);
+    }
+
+    private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, UnaryOperator<Item.Properties> itemProperties) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, name))));
-        registerBlockItem(name, toRegister);
+        registerBlockItem(name, toRegister, itemProperties);
         return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, name), toRegister);
     }
 
@@ -76,14 +84,15 @@ public class ModBlocks {
                     CHORAL_WALL_FAN,
                     Direction.DOWN,
                     new Item.Properties().useBlockDescriptionPrefix()
+                            .cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_ITEMS_EXTRA_SMALL)
                             .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, "choral_fan")))
             )
     );
 
-    private static void registerBlockItem(String name, Block block) {
+    private static void registerBlockItem(String name, Block block, UnaryOperator<Item.Properties> itemProperties) {
         Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, name),
-                new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
-                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, name)))));
+                new BlockItem(block, itemProperties.apply(new Item.Properties().useBlockDescriptionPrefix()
+                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, name))))));
     }
 
     public static void registerModBlock() {

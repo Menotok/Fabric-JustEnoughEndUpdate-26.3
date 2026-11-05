@@ -18,6 +18,9 @@
 		"main": [
 			"net.menotok.justenoughendupdate.JustEnoughEndUpdate"
 		],
+		"client": [
+			"net.menotok.justenoughendupdate.JustEnoughEndUpdateClient"
+		],
 		"fabric-datagen": [
 			"net.menotok.justenoughendupdate.JustEnoughEndUpdateDataGenerator"
 		]
