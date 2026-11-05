@@ -8,6 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
+import org.jspecify.annotations.NullMarked;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,7 +17,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         super(output, registryLookupFuture);
     }
 
-    @Override
+    @NullMarked @Override
     protected void addTags(HolderLookup.Provider registries) {
         builder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SLATE).orElseThrow());

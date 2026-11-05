@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.PushReaction;
+import org.jspecify.annotations.NullMarked;
 
 import java.util.function.Function;
 
@@ -24,7 +25,7 @@ public class ModBlocks {
     public static final Block END_SAND = registerBlock("end_sand",
             properties -> new FallingBlock(properties.strength(2.0F, 6.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.SAND)) {
-                @Override
+                @NullMarked @Override
                 public int getDustColor(BlockState blockState, BlockGetter level, BlockPos pos) {
                     return 0;
                 }});
