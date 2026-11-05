@@ -15,10 +15,10 @@ public class ModCreativeModeTabs {
 
     public static final CreativeModeTab END_UPDATE_ITEMS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, "end_update_items"),
-            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TEST))
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BAKED_CHORUS_FRUIT))
                     .title(Component.translatable("creativemodetab.justenoughendupdate.endupdate_items"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.TEST);
+                        output.accept(ModItems.BAKED_CHORUS_FRUIT);
                         output.accept(ModBlocks.CHORAL);
                         output.accept(ModBlocks.CHORAL_FAN_ITEM);
                         output.accept(ModBlocks.TENOR_SPROUTS);

@@ -11,7 +11,7 @@ import net.minecraft.world.item.Item;
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item TEST = registerItem("test", Item::new);
+    public static final Item BAKED_CHORUS_FRUIT = registerItem("baked_chorus_fruit", Item::new);
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

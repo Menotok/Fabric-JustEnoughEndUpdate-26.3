@@ -16,7 +16,8 @@ public class JustEnoughEndUpdateDataGenerator implements DataGeneratorEntrypoint
 		pack.addProvider(ModBlockTagsProvider::new);
 		pack.addProvider(ModRegistryDataProvider::new);
 		pack.addProvider(ModBiomeTagProvider::new);
-		pack.addProvider(ModBlockLootTableProvider::new);
+        pack.addProvider(ModBlockLootTableProvider::new);
+		pack.addProvider(ModRecipeProvider::new);
 	}
 
 	@Override
