@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.NetherVines;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jspecify.annotations.NullMarked;
 
 public class CappellaVinesBlock extends GrowingPlantHeadBlock {
     private static final VoxelShape SHAPE = Block.column(15.0, 0.0, 15.0);
@@ -17,17 +18,17 @@ public class CappellaVinesBlock extends GrowingPlantHeadBlock {
         super(properties, Direction.DOWN, SHAPE, false, 0.1);
     }
 
-    @Override
+    @NullMarked @Override
     protected int getBlocksToGrowWhenBonemealed(final RandomSource random) {
         return NetherVines.getBlocksToGrowWhenBonemealed(random);
     }
 
-    @Override
+    @NullMarked @Override
     protected Block getBodyBlock() {
         return ModBlocks.CAPPELLA_VINES_PLANT_BLOCK;
     }
 
-    @Override
+    @NullMarked @Override
     protected boolean canGrowInto(final BlockState state) {
         return NetherVines.isValidGrowthState(state);
     }
