@@ -22,14 +22,14 @@ import java.util.function.Function;
 
 public class ModBlocks {
     public static final Block END_SAND = registerBlock("end_sand",
-            properties -> new FallingBlock(properties.strength(4.5f)
+            properties -> new FallingBlock(properties.strength(2.0F, 6.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.SAND)) {
                 @Override
                 public int getDustColor(BlockState blockState, BlockGetter level, BlockPos pos) {
                     return 0;
                 }});
     public static final Block END_SLATE = registerBlock("end_slate",
-            properties -> new Block(properties.strength(4.5f, 9.0F)
+            properties -> new Block(properties.strength(4.5F, 12.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final Block CHORAL_BLOCK = registerBlock( "choral_block",

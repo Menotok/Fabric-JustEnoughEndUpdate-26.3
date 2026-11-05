@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CappellaVinesBlock extends GrowingPlantHeadBlock {
-    private static final VoxelShape SHAPE = Block.column(8.0, 9.0, 16.0);
+    private static final VoxelShape SHAPE = Block.column(15.0, 0.0, 15.0);
 
     public CappellaVinesBlock(final BlockBehaviour.Properties properties) {
         super(properties, Direction.DOWN, SHAPE, false, 0.1);

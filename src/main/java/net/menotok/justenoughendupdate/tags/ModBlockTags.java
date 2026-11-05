@@ -15,7 +15,7 @@ public class ModBlockTags {
     public static final TagKey<Block> TENOR_SPROUTS;
     public static final TagKey<Block> SUPPORTS_END_PLANTS;
 
-    public static final TagKey<Block> TENOR_VINES_GENERATE_ON;
+    public static final TagKey<Block> CAPPELLA_VINES_GENERATE_ON;
 
     private ModBlockTags() {
     }
@@ -31,6 +31,6 @@ public class ModBlockTags {
         CHORAL_PLANTS = create("choral_plants");
         TENOR_SPROUTS = create("tenor_sprouts");
         SUPPORTS_END_PLANTS = create("support_end_plants");
-        TENOR_VINES_GENERATE_ON = create("tenor_vines_generate_on");
+        CAPPELLA_VINES_GENERATE_ON = create("cappella_vines_generate_on");
     }
 }

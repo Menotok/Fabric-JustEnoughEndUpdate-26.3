@@ -22,6 +22,7 @@ public class ModFeatures {
         context.register(END_SURFACE, new EndSurfaceFeature());
         context.register(SMALL_ISLAND, new SmallIslandFeature());
         context.register(END_PLANTS, new SimpleBlockFeature(BlockStateProvider.of(ModBlocks.TENOR_SPROUTS)));
+
         ChoralFeatures.bootstrap(context);
         CappellaVinesFeature.bootstrap(context);
     }

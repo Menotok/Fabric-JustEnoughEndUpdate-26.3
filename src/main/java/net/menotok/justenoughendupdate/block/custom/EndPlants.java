@@ -14,7 +14,7 @@ public class EndPlants extends VegetationBlock {
     public EndPlants(BlockBehaviour.Properties properties) {
         super(properties);
     }
-    private static final VoxelShape SHAPE = Block.column(12.0, 0.0, 3.0);
+    private static final VoxelShape SHAPE = Block.column(16.0, 0.0, 13.0);
 
     @Override
     protected VoxelShape getShape(final BlockState state, final BlockGetter level, final BlockPos pos, final CollisionContext context) {

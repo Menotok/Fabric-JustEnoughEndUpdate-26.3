@@ -33,7 +33,7 @@ public class ModWorldGeneration {
         add(VOID, GenerationStep.Decoration.RAW_GENERATION, ModPlacedFeatures.SMALL_ISLAND_PLACED);
         add(LUSH, GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.CHORAL_PLACED);
         add(ALL_END, GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.END_PLANTS_PLACED);
-        add(ALL_END, GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.TENOR_VINES_PLACED);
+        add(ALL_END, GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.CAPPELLA_VINES_PLACED);
 
         BiomeModifications.create(Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, "remove_vanilla_small_islands"))
                 .add(ModificationPhase.REMOVALS,

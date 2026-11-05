@@ -11,13 +11,22 @@ import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
-    public ModBlockTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
-        super(output, registriesFuture);
+public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
+    public ModBlockTagsProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
+        super(output, registryLookupFuture);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
+        builder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SLATE).orElseThrow());
+
+        builder(BlockTags.MINEABLE_WITH_AXE)
+                .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.CHORAL_BLOCK).orElseThrow());
+
+        builder(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SAND).orElseThrow());
+
         builder(BlockTags.SUPPORTS_CHORUS_PLANT).add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SAND).orElseThrow());
         builder(BlockTags.SUPPORTS_CHORUS_FLOWER).add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SAND).orElseThrow());
 
@@ -32,7 +41,7 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SAND).orElseThrow())
                 .forceAddTag(BlockTags.SUPPORTS_NETHER_SPROUTS);
 
-        builder(ModBlockTags.TENOR_VINES_GENERATE_ON)
+        builder(ModBlockTags.CAPPELLA_VINES_GENERATE_ON)
                 .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SAND).orElseThrow())
                 .add(BuiltInRegistries.BLOCK.getResourceKey(Blocks.END_STONE).orElseThrow())
                 .add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.END_SLATE).orElseThrow());
