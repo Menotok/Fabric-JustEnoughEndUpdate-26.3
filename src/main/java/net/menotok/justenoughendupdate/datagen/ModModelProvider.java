@@ -2,11 +2,14 @@ package net.menotok.justenoughendupdate.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.menotok.justenoughendupdate.JustEnoughEndUpdate;
 import net.menotok.justenoughendupdate.block.ModBlocks;
 import net.menotok.justenoughendupdate.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.resources.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
@@ -31,5 +34,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.BAKED_CHORUS_FRUIT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.itemModelOutput.accept(ModItems.SHULKERBACKPACK,
+                ItemModelUtils.plainModel(Identifier.fromNamespaceAndPath(JustEnoughEndUpdate.MOD_ID, "item/shulker_backpack")));
+
     }
 }
