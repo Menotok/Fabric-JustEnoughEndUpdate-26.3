@@ -2,7 +2,6 @@ package net.menotok.justenoughendupdate.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.menotok.justenoughendupdate.JustEnoughEndUpdate;
 import net.menotok.justenoughendupdate.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.player.PlayerModel;
