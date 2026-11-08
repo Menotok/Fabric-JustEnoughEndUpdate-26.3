@@ -1,9 +1,9 @@
-# just enough end update
+# Menotok's Just Enough End Update
 
 ## Setup
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+Simply put the JAR file in your mods folder, and everything should work right away as long as you have Fabric installed for Minecraft version 26.3
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This mod is available under the MIT license.
