@@ -1,7 +1,20 @@
 {
   "variants": {
-    "": {
-      "model": "justenoughendupdate:block/end_slate"
-    }
+    "": [
+      {
+        "model": "justenoughendupdate:block/end_slate"
+      },
+      {
+        "model": "justenoughendupdate:block/end_slate_mirrored"
+      },
+      {
+        "model": "justenoughendupdate:block/end_slate",
+        "y": 180
+      },
+      {
+        "model": "justenoughendupdate:block/end_slate_mirrored",
+        "y": 180
+      }
+    ]
   }
 }

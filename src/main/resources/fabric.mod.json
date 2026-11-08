@@ -2,16 +2,16 @@
 	"schemaVersion": 1,
 	"id": "justenoughendupdate",
 	"version": "${version}",
-	"name": "just enough end update",
-	"description": "This is a mod that updates the end dimension",
+	"name": "Menotok's Just Enough End Update",
+	"description": "A mod that updates End generation, as well as adding additional blocks, items, and more, whilst keeping a vanilla feeling.",
 	"authors": [
 		"Menotok"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/menotoks-just-enough-end-update",
+		"sources": "https://github.com/Menotok/Fabric-JustEnoughEndUpdate-26.3"
 	},
-	"license": "MIT-License",
+	"license": "MIT",
 	"icon": "assets/justenoughendupdate/icon.png",
 	"environment": "*",
 	"entrypoints": {

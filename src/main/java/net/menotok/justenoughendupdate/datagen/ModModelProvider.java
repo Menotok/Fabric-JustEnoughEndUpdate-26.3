@@ -19,7 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createRotatedVariantBlock(ModBlocks.END_SAND);
-        blockModelGenerators.createTrivialCube(ModBlocks.END_SLATE);
+        blockModelGenerators.createRotatedMirroredVariantBlock(ModBlocks.END_SLATE);
 
         blockModelGenerators.createTrivialCube(ModBlocks.CHORAL_BLOCK);
         blockModelGenerators.createCoralFans(ModBlocks.CHORAL_FAN,ModBlocks.CHORAL_WALL_FAN);
