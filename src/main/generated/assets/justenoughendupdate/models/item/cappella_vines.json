@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "justenoughendupdate:block/cappella_vines_plant"
+  }
+}

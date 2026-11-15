@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 482917653,
+    "separation": 3,
+    "spacing": 6
+  },
+  "structures": [
+    {
+      "structure": "justenoughendupdate:end_fossil",
+      "weight": 1
+    }
+  ]
+}

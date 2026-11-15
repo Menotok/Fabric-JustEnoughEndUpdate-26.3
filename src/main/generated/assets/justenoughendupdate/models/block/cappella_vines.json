@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "justenoughendupdate:block/cappella_vines"
+  }
+}

@@ -1,0 +1,15 @@
+// 26.3	-999999999-01-01T00:00:00	Menotok's Just Enough End Update/Tags for minecraft:block
+ceb0224305aa028078155950d3c0eacc353141af data/justenoughendupdate/tags/block/cappella_vines_generate_on.json
+2a4ac793b7fbcb4cb513e1f385b6efa0e1c6980c data/justenoughendupdate/tags/block/choral_blocks.json
+9a03395983dfeef8ae656b9e6e0bbd49d5b1e54b data/justenoughendupdate/tags/block/choral_plants.json
+5b3f5165f191afcb0c70639de3fd8175e467ef91 data/justenoughendupdate/tags/block/chorals.json
+d40dc7af28a57d08ec331db77f5d64f83b424e6b data/justenoughendupdate/tags/block/support_end_plants.json
+923a9a30e0656e9203eb6246f7ebee005b600d0f data/justenoughendupdate/tags/block/wall_chorals.json
+b83e176e4431bee5ced933da00c02ea608996323 data/minecraft/tags/block/blocks_motion_in_heightmap.json
+b83e176e4431bee5ced933da00c02ea608996323 data/minecraft/tags/block/blocks_motion_in_heightmap_no_leaves.json
+e779b2fb1c80d37125fe8f835de716f456898c19 data/minecraft/tags/block/climbable.json
+2a4ac793b7fbcb4cb513e1f385b6efa0e1c6980c data/minecraft/tags/block/mineable/axe.json
+43b4524591cb5e4c285e8851c3c56830037f457e data/minecraft/tags/block/mineable/pickaxe.json
+7019b95a3adbde530c9231466382a8b45a774290 data/minecraft/tags/block/mineable/shovel.json
+7019b95a3adbde530c9231466382a8b45a774290 data/minecraft/tags/block/supports_chorus_flower.json
+7019b95a3adbde530c9231466382a8b45a774290 data/minecraft/tags/block/supports_chorus_plant.json

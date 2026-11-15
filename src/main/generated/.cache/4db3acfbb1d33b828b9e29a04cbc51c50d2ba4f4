@@ -1,0 +1,9 @@
+// 26.3	-999999999-01-01T00:00:00	Menotok's Just Enough End Update/Block Loot Tables
+ecdc7aa22f1c845f0667ed88809e31db74af505d data/justenoughendupdate/loot_table/blocks/cappella_vines.json
+ecdc7aa22f1c845f0667ed88809e31db74af505d data/justenoughendupdate/loot_table/blocks/cappella_vines_plant.json
+057f72331d35f74041a11d5894967b57320e330f data/justenoughendupdate/loot_table/blocks/choral_block.json
+db6c43a2c6b332dcd31ae5877242501840343a10 data/justenoughendupdate/loot_table/blocks/choral_fan.json
+db6c43a2c6b332dcd31ae5877242501840343a10 data/justenoughendupdate/loot_table/blocks/choral_wall_fan.json
+3b1f13ea830aaed7f8f4da05b291c82ed45ae81e data/justenoughendupdate/loot_table/blocks/end_sand.json
+3ca68290edb79ee49390e48cc7be3f11e24025a5 data/justenoughendupdate/loot_table/blocks/end_slate.json
+592a2dc120e877de3ccfc174e27cedbb5a7beb56 data/justenoughendupdate/loot_table/blocks/tenor_sprouts.json

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": "minecraft:iron_nugget",
+    "S": "minecraft:string",
+    "X": "#minecraft:shulker_boxes"
+  },
+  "pattern": [
+    "N N",
+    "SXS",
+    "S S"
+  ],
+  "result": {
+    "id": "justenoughendupdate:shulker_backpack"
+  }
+}
